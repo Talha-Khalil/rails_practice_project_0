@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tree.name %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @tree.twitter %>
+</p>
+
+<p>
+  <strong>Youtube:</strong>
+  <%= @tree.youtube %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tree.user_id %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @tree.style %>
+</p>
+
+<%= link_to 'Edit', edit_tree_path(@tree) %> |
+<%= link_to 'Back', trees_path %>
