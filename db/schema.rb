@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_07_25_123001) do
+ActiveRecord::Schema.define(version: 2024_07_30_121548) do
 
   create_table "cars", force: :cascade do |t|
     t.string "make"
@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(version: 2024_07_25_123001) do
     t.string "twitter"
     t.string "youtube"
     t.integer "user_id"
-    t.string "style"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "instagram"
   end
 
   create_table "users", force: :cascade do |t|
