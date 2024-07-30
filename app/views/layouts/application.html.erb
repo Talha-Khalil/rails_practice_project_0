@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyFirstRailsApp</title>
+    <title>Linktreeclone</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%#= favicon_link_tag 'favicon.png' %>
+
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-  <%= render 'layouts/navbar' %>
+    <%= render "layouts/navbar" %>
     <%= yield %>
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
   </body>
 </html>

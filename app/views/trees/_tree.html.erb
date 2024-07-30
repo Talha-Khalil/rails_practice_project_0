@@ -1,0 +1,39 @@
+<div class="linktree"id="<%= dom_id tree %>" style="text-align:center; padding: 20px;   ">
+
+    <h1 style="text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"> <%= tree.name %> </h1>
+
+
+
+<% attributes_to_display = {
+
+     "Instagram" => tree.instagram,
+     "X" => tree.twitter,
+     "Youtube" => tree.youtube,
+
+
+
+   }
+
+attributes_to_display.each do |label, value|
+  if value.present? %>
+<!-- <strong><%= label %>:</strong> -->
+<div style="margin-top: 20px; display: block;  padding: 10px; border-radius: 8px; transition: box-shadow 0.3s ease;">
+  <%= link_to "#{value}", value, style: "text-decoration: none;", class:"link" %>
+</div>
+
+ <% end end %>
+</div>
+
+<style>
+.linktree
+{
+  background-color: black;
+  color: white;
+}
+.link
+{
+  color: orange;
+}
+</style>
+
+

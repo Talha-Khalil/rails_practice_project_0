@@ -1,5 +1,17 @@
-<h1>New Tree</h1>
+<%= stylesheet_link_tag "trees" %>
 
-<%= render 'form', tree: @tree %>
+<div class="container">
 
-<%= link_to 'Back', trees_path %>
+
+
+
+
+<%= render "form", tree: @tree %>
+
+<br>
+<!--
+<div>
+  <%= link_to "Back to trees", trees_path %>
+</div>
+--->
+</div>
