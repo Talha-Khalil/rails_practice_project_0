@@ -1,14 +1,11 @@
 <%= form_with(model: tree, html: { id: 'tree-form' }) do |form| %>
-  <% if tree.errors.any? %>
+ <% if tree.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(tree.errors.count, "error") %> prohibited this tree from being saved:</h2>
-      <ul>
-        <% tree.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
     </div>
   <% end %>
+
+
 
   <!-- First part -->
   <div id="first-part">
@@ -155,28 +152,5 @@
   .Input-label {
     font-size: 25px;
   }
-
-  .dark-mode {
-    color: white;
-    background-color: black;
-  }
-
-  @keyframes rainbow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .rainbow-mode {
-    color: white;
-    background: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red);
-    background-size: 150% 150%;
-    animation: rainbow 5s infinite;
-  }
+    
 </style>
